@@ -1,0 +1,25 @@
+-   [ ] add commitizen and push to github
+-   [ ] create a light mode function that keeps the blue glow but turns the screen almost white
+-   [ ] include and breadcrumb similar tio the nextjs documentation
+-   [ ] change the docs folder to have multiple nesting and an accordian style sidebare like the nextjs docs
+-   [ ] use folder/file ordering like the nextjs documentation
+-   [ ] load markdown files based on sidebar click
+-   [ ] create an 'on this page' sidebar at the right hand side
+-   [ ] have a scroll to top button dynamically show when users scroll to the bottom
+-   [ ] complete search bar functionailty
+-   [ ] add 404 not founf page to incorrect slug
+-   [ ] add pagination at the bottom of the doc
+-   [ ] build a footer
+-   [ ] add share button functionality
+-   [ ] add error upon empty docs folder
+-   [ ] add a config file to change the following:
+    -   [ ] github icon to gitlab/bitbucket
+    -   [ ] disable scroll to top button
+    -   [ ] footer content
+    -   [ ] disbale share button
+-   [ ] Add pre-built markdown components like:
+    -   [ ] codeblock
+    -   [ ] info/tip/warning
+    -   [ ] accordion
+-   [ ] use your docs to document your own docs (not a riddle)
+-   [ ] create a landing page advertising your docs
