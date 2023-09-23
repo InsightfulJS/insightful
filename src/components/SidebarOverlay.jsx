@@ -1,9 +1,17 @@
 'use client';
 
+import React, { useState, useEffect } from 'react';
 import { useTheme } from 'next-themes';
 
 const SidebarOverlay = () => {
+	const [mounted, setMounted] = useState(false);
 	const { theme } = useTheme();
+
+	useEffect(() => {
+		setMounted(true);
+	}, []);
+
+	if (!mounted) return null;
 
 	if (theme === 'dark') {
 		return (

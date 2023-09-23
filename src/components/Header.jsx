@@ -5,7 +5,7 @@ import ThemeToggle from './ThemeToggle';
 
 const Header = () => {
 	return (
-		<div className='w-full h-12 flex flex-row px-4 py-2 gap-4 justify-between items-center bg-slate-100 dark:bg-slate-900 border-b border-slate-300 dark:border-slate-600'>
+		<div className='w-full h-14 flex flex-row px-4 py-2 gap-4 justify-between items-center bg-slate-100 dark:bg-slate-900 border-b border-slate-300 dark:border-slate-600'>
 			{/* Search Bar Button */}
 			<button
 				type='button'

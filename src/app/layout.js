@@ -16,11 +16,7 @@ export default function RootLayout({ children }) {
 	return (
 		<html lang='en'>
 			<body className={inter.className}>
-				<ThemeProvider
-					attribute='class'
-					defaultTheme='system'
-					enableSystem
-				>
+				<ThemeProvider attribute='class' defaultTheme='light'>
 					<main className='flex h-screen flex-row items-start justify-start bg-gradient-to-br from-slate-100 to-slate-300 dark:bg-gradient-to-br dark:from-slate-900 dark:to-slate-800'>
 						<Sidebar />
 						<div className='w-full h-full flex flex-col justify-start items-start gap-6'>

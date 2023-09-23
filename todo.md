@@ -1,6 +1,7 @@
 -   [x] add commitizen and push to github
 -   [x] create a light mode function that keeps the blue glow but turns the screen almost white
 -   [ ] create better logo
+-   [ ] add custom font
 -   [ ] include and breadcrumb similar tio the nextjs documentation
 -   [ ] change the docs folder to have multiple nesting and an accordian style sidebare like the nextjs docs
 -   [ ] use folder/file ordering like the nextjs documentation
@@ -8,7 +9,7 @@
 -   [ ] create an 'on this page' sidebar at the right hand side
 -   [ ] have a scroll to top button dynamically show when users scroll to the bottom
 -   [ ] complete search bar functionailty
--   [ ] add 404 not founf page to incorrect slug
+-   [ ] add 404 not found page to incorrect slug
 -   [ ] add pagination at the bottom of the doc
 -   [ ] build a footer
 -   [ ] add share button functionality

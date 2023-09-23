@@ -1,6 +1,6 @@
 import path from 'path';
-import { FaRegLightbulb } from 'react-icons/fa';
 
+import DynamicLogo from './DynamicLogo';
 import SidebarOverlay from './SidebarOverlay';
 import SidebarLinks from './SidebarLinks';
 import { generateSidebarContent } from '@/utils/generateSidebarContent';
@@ -21,10 +21,7 @@ const Sidebar = () => {
 			<div className='absolute w-full h-full flex flex-col justify-start items-start pt-4 pb-8 px-4 gap-12'>
 				{/* Logo */}
 				<div className='flex flex-row gap-2 justify-center items-center'>
-					<FaRegLightbulb className='text-slate-800 dark:text-cyan-50 w-4 h-4' />
-					<p className='text-slate-800 dark:text-slate-100 font-medium text-lg'>
-						Insightful
-					</p>
+					<DynamicLogo />
 				</div>
 
 				{/* Main Navigation */}

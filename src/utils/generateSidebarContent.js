@@ -3,6 +3,7 @@ import path from 'path';
 import matter from 'gray-matter';
 
 import { pathToTitleCase } from './pathToTitleCase';
+
 /* 
     In the `docs/` directory, you must place your markdown files in respective folders like so: 
 
@@ -16,7 +17,6 @@ import { pathToTitleCase } from './pathToTitleCase';
     docs/
         ihavenoplace.md
 */
-
 export const generateSidebarContent = (docsDir) => {
 	return fs
 		.readdirSync(docsDir, { withFileTypes: true })
