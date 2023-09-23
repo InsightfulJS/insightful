@@ -19,7 +19,7 @@ const Page = ({ params }) => {
 	const breadcrumb = slug.join('/');
 
 	return (
-		<div>
+		<div className='flex flex-row justify-center items-center px-12 py-6'>
 			<Markdown>{html}</Markdown>
 		</div>
 	);

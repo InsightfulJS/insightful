@@ -1,11 +1,11 @@
 -   [x] add commitizen and push to github
 -   [x] create a light mode function that keeps the blue glow but turns the screen almost white
--   [ ] create better logo
--   [ ] add custom font
+-   [x] create better logo
+-   [x] add custom font
+-   [ ] load markdown files based on sidebar click
 -   [ ] include and breadcrumb similar tio the nextjs documentation
 -   [ ] change the docs folder to have multiple nesting and an accordian style sidebare like the nextjs docs
 -   [ ] use folder/file ordering like the nextjs documentation
--   [ ] load markdown files based on sidebar click
 -   [ ] create an 'on this page' sidebar at the right hand side
 -   [ ] have a scroll to top button dynamically show when users scroll to the bottom
 -   [ ] complete search bar functionailty
