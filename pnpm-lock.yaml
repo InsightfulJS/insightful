@@ -13,6 +13,7 @@ specifiers:
   gray-matter: ^4.0.3
   markdown-to-jsx: ^7.3.2
   next: 13.5.2
+  next-themes: ^0.2.1
   path: ^0.12.7
   postcss: 8.4.30
   react: 18.2.0
@@ -32,6 +33,7 @@ dependencies:
   gray-matter: 4.0.3
   markdown-to-jsx: 7.3.2_react@18.2.0
   next: 13.5.2_biqbaboplfbrettd7655fr4n2y
+  next-themes: 0.2.1_a5awh3fq7n5gjpbh6s2j4fmxfi
   path: 0.12.7
   postcss: 8.4.30
   react: 18.2.0
@@ -1077,9 +1079,6 @@ packages:
       chalk: 4.1.2
       commitizen: 4.3.0
       word-wrap: 1.2.5
-    transitivePeerDependencies:
-      - '@swc/core'
-      - '@swc/wasm'
     dev: false
 
   /damerau-levenshtein/1.0.8:
@@ -2973,6 +2972,18 @@ packages:
 
   /natural-compare/1.4.0:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
+    dev: false
+
+  /next-themes/0.2.1_a5awh3fq7n5gjpbh6s2j4fmxfi:
+    resolution: {integrity: sha512-B+AKNfYNIzh0vqQQKqQItTS8evEouKD7H5Hj3kmuPERwddR2TxvDSFZuTj6T7Jfn1oyeUyJMydPl1Bkxkh0W7A==}
+    peerDependencies:
+      next: '*'
+      react: '*'
+      react-dom: '*'
+    dependencies:
+      next: 13.5.2_biqbaboplfbrettd7655fr4n2y
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
     dev: false
 
   /next/13.5.2_biqbaboplfbrettd7655fr4n2y:

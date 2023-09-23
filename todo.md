@@ -1,5 +1,6 @@
--   [ ] add commitizen and push to github
--   [ ] create a light mode function that keeps the blue glow but turns the screen almost white
+-   [x] add commitizen and push to github
+-   [x] create a light mode function that keeps the blue glow but turns the screen almost white
+-   [ ] create better logo
 -   [ ] include and breadcrumb similar tio the nextjs documentation
 -   [ ] change the docs folder to have multiple nesting and an accordian style sidebare like the nextjs docs
 -   [ ] use folder/file ordering like the nextjs documentation
@@ -17,6 +18,7 @@
     -   [ ] disable scroll to top button
     -   [ ] footer content
     -   [ ] disbale share button
+    -   [ ] custom logo
 -   [ ] Add pre-built markdown components like:
     -   [ ] codeblock
     -   [ ] info/tip/warning
