@@ -2,11 +2,12 @@
 -   [x] create a light mode function that keeps the blue glow but turns the screen almost white
 -   [x] create better logo
 -   [x] add custom font
--   [ ] load markdown files based on sidebar click
--   [ ] include and breadcrumb similar tio the nextjs documentation
+-   [x] load markdown files based on sidebar click
+-   [x] include and breadcrumb similar to the nextjs documentation
+-   [x] create an 'on this page' sidebar at the right hand side
+-   [ ] make 'on this page' links anchor to the page titles
 -   [ ] change the docs folder to have multiple nesting and an accordian style sidebare like the nextjs docs
 -   [ ] use folder/file ordering like the nextjs documentation
--   [ ] create an 'on this page' sidebar at the right hand side
 -   [ ] have a scroll to top button dynamically show when users scroll to the bottom
 -   [ ] complete search bar functionailty
 -   [ ] add 404 not found page to incorrect slug

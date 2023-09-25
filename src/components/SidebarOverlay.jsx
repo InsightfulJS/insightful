@@ -64,11 +64,11 @@ const SidebarOverlay = () => {
 						gradientUnits='userSpaceOnUse'
 						gradientTransform='translate(484 491) rotate(-180) scale(384 491)'
 					>
-						<stop stopColor='#3783F5' stopOpacity='0.36' />
+						<stop stopColor='#3783F5' stopOpacity='0.23' />
 						<stop
 							offset='0.359375'
 							stopColor='#368BEF'
-							stopOpacity='0.23'
+							stopOpacity='0.13'
 						/>
 						<stop offset='1' stopColor='#DEDEDE' stopOpacity='0' />
 					</radialGradient>
