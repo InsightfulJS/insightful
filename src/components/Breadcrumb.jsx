@@ -1,6 +1,9 @@
 import React from 'react';
 import { HiHome } from 'react-icons/hi';
 
+import { pathToTitleCase } from '@/utils/pathToTitleCase';
+import { removeNumberedPrefix } from '@/utils/removeNumberedPrefix';
+
 const Breadcrumb = ({ slugArray = [] }) => {
 	return (
 		<nav className='w-full text-xs font-normal text-slate-500 dark:text-slate-300'>
@@ -10,9 +13,12 @@ const Breadcrumb = ({ slugArray = [] }) => {
 				</a>
 				<span className=''>/</span>
 				{slugArray.map((section, idx) => {
+					const sectionName = pathToTitleCase(
+						removeNumberedPrefix(section)
+					).replace('.md', '');
 					return (
 						<React.Fragment key={idx}>
-							<p>{section.replace('.md', '')}</p>
+							<p>{sectionName}</p>
 							{idx < slugArray.length - 1 && (
 								<span className=''>/</span>
 							)}

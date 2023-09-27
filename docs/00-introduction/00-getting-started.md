@@ -2,4 +2,4 @@
 title: 'Getting Started'
 ---
 
-# Getting Started
+## First Steps

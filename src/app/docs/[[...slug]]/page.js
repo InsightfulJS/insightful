@@ -7,8 +7,6 @@ import { markdownToReact } from '@/utils/markdownToReact';
 const Page = ({ params }) => {
 	const { slug: slugArray } = { ...params };
 
-	// const breadcrumb = slugArray.join(' / ').replace('.md', '');
-
 	const { content, data } = { ...getDocContent({ slugArray }) };
 	const { headings, documentContent } = { ...markdownToReact(content) };
 

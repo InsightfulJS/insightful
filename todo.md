@@ -9,8 +9,9 @@
 -   [x] add home page
 -   [x] template the rendering in a layout file
 -   [x] create breadcrumb component
--   [ ] generate sidebar based on file/folder numbering system
+-   [x] generate sidebar based on file/folder numbering system
 -   [ ] add syntax highlighting to code blocks
+-   [ ] fix if you try to go to a slug that is a folder and not a file, like just /docs
 -   [ ] highlight which 'on this page' you are on
 -   [ ] change the docs folder to have multiple nesting and an accordian style sidebare like the nextjs docs
 -   [ ] use folder/file ordering like the nextjs documentation
@@ -34,3 +35,4 @@
     -   [ ] accordion
 -   [ ] use your docs to document your own docs (not a riddle)
 -   [ ] create a landing page advertising your docs
+-   [ ] add a 'was this page helpful' section at the bottom, maybe use node mail?
