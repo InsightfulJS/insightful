@@ -5,7 +5,13 @@
 -   [x] load markdown files based on sidebar click
 -   [x] include and breadcrumb similar to the nextjs documentation
 -   [x] create an 'on this page' sidebar at the right hand side
--   [ ] make 'on this page' links anchor to the page titles
+-   [x] make 'on this page' links anchor to the page titles
+-   [x] add home page
+-   [x] template the rendering in a layout file
+-   [x] create breadcrumb component
+-   [ ] generate sidebar based on file/folder numbering system
+-   [ ] add syntax highlighting to code blocks
+-   [ ] highlight which 'on this page' you are on
 -   [ ] change the docs folder to have multiple nesting and an accordian style sidebare like the nextjs docs
 -   [ ] use folder/file ordering like the nextjs documentation
 -   [ ] have a scroll to top button dynamically show when users scroll to the bottom
@@ -15,6 +21,7 @@
 -   [ ] build a footer
 -   [ ] add share button functionality
 -   [ ] add error upon empty docs folder
+-   [ ] make fully responsive
 -   [ ] add a config file to change the following:
     -   [ ] github icon to gitlab/bitbucket
     -   [ ] disable scroll to top button

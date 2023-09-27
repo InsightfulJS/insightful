@@ -4,19 +4,6 @@ import matter from 'gray-matter';
 
 import { pathToTitleCase } from './pathToTitleCase';
 
-/* 
-    In the `docs/` directory, you must place your markdown files in respective folders like so: 
-
-    docs/
-       introduction/ 
-         gettingstarted.md
-         installation.md
-
-    Rogue files within the `docs/` directory will be ignored, like: 
-
-    docs/
-        ihavenoplace.md
-*/
 export const generateSidebarContent = (docsDir) => {
 	return fs
 		.readdirSync(docsDir, { withFileTypes: true })

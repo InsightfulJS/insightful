@@ -7,7 +7,7 @@ const Prose = ({ as: Component = 'div', className, ...props }) => {
 				className,
 				'prose prose-slate max-w-none dark:prose-invert dark:text-slate-400',
 				// headings
-				'prose-headings:scroll-mt-12 prose-headings:font-normal lg:prose-headings:scroll-mt-[8.5rem] prose-h2:text-lg prose-h2:font-semibold prose-h3:font-semibold prose-h3:text-base prose-h4:text-base',
+				'prose-headings:scroll-mt-12 prose-headings:font-normal lg:prose-headings:scroll-mt-[3rem] prose-h2:text-lg prose-h2:font-semibold prose-h3:font-semibold prose-h3:text-base prose-h4:text-base',
 				// lead
 				'prose-lead:text-slate-500 dark:prose-lead:text-slate-400',
 				// links
