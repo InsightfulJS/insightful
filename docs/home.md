@@ -12,3 +12,10 @@ Some content will go here.
 {% callout type="tip" title="Tip" %}
 Markdoc is open-source—check out its [source](http://github.com/markdoc/markdoc) to see how it works.
 {% /callout %}
+
+```js
+const x = 42;
+for (const i = 0; i < x; i++) {
+	console.log(i);
+}
+```

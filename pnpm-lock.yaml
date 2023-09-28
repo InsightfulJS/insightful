@@ -10,6 +10,7 @@ specifiers:
   '@tailwindcss/typography': ^0.5.10
   autoprefixer: 10.4.16
   clsx: ^2.0.0
+  copy-to-clipboard: ^3.3.3
   cz-conventional-changelog: ^3.3.0
   cz-emoji-conventional: ^1.0.2
   eslint: 8.49.0
@@ -21,6 +22,7 @@ specifiers:
   next-themes: ^0.2.1
   path: ^0.12.7
   postcss: 8.4.30
+  prismjs: ^1.29.0
   react: 18.2.0
   react-dom: 18.2.0
   react-icons: ^4.11.0
@@ -37,6 +39,7 @@ dependencies:
   '@tailwindcss/typography': 0.5.10_tailwindcss@3.3.3
   autoprefixer: 10.4.16_postcss@8.4.30
   clsx: 2.0.0
+  copy-to-clipboard: 3.3.3
   cz-emoji-conventional: 1.0.2
   eslint: 8.49.0
   eslint-config-next: 13.5.2_eslint@8.49.0
@@ -47,6 +50,7 @@ dependencies:
   next-themes: 0.2.1_a5awh3fq7n5gjpbh6s2j4fmxfi
   path: 0.12.7
   postcss: 8.4.30
+  prismjs: 1.29.0
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-icons: 4.11.0_react@18.2.0
@@ -1095,6 +1099,12 @@ packages:
 
   /conventional-commit-types/3.0.0:
     resolution: {integrity: sha512-SmmCYnOniSsAa9GqWOeLqc179lfr5TRu5b4QFDkbsrJ5TZjPJx85wtOr3zn+1dbeNiXDKGPbZ72IKbPhLXh/Lg==}
+
+  /copy-to-clipboard/3.3.3:
+    resolution: {integrity: sha512-2KV8NhB5JqC3ky0r9PMCAZKbUHSwtEo4CwCs0KXgruG43gX5PMqDEBbVU4OUzw2MuAWUfsuFmWvEKG5QRfSnJA==}
+    dependencies:
+      toggle-selection: 1.0.6
+    dev: false
 
   /cosmiconfig-typescript-loader/4.4.0_lufcswyucq6x27wcxbrsshir4q:
     resolution: {integrity: sha512-BabizFdC3wBHhbI4kJh0VkQP9GkBfoHPydD0COMce1nJ1kJAB3F2TmJ/I7diULBKtmEWSwEbuN/KDtgnmUUVmw==}
@@ -3448,6 +3458,11 @@ packages:
     engines: {node: '>= 0.8.0'}
     dev: false
 
+  /prismjs/1.29.0:
+    resolution: {integrity: sha512-Kx/1w86q/epKcmte75LNrEoT+lX8pBpavuAbvJWRXar7Hz8jrtF+e3vY751p0R8H9HdArwaCTNDDzHg/ScJK1Q==}
+    engines: {node: '>=6'}
+    dev: false
+
   /process/0.11.10:
     resolution: {integrity: sha512-cdGef/drWFoydD1JsMzuFf8100nZl+GT+yacc2bEced5f9Rjk4z+WtFUTBu9PhOi9j/jfmBPu0mMEY4wIdAF8A==}
     engines: {node: '>= 0.6.0'}
@@ -3991,6 +4006,10 @@ packages:
     engines: {node: '>=8.0'}
     dependencies:
       is-number: 7.0.0
+
+  /toggle-selection/1.0.6:
+    resolution: {integrity: sha512-BiZS+C1OS8g/q2RRbJmy59xpyghNBqrr6k5L/uKBGRsTfxmu3ffiRnd8mlGPUVayg8pvfi5urfnu8TU7DVOkLQ==}
+    dev: false
 
   /trim-lines/3.0.1:
     resolution: {integrity: sha512-kRj8B+YHZCc9kQYdWfJB2/oUl9rA99qbowYYBtr4ui4mZyAQ2JpvVBd/6U2YloATfqBhBTSMhTpgBHtU0Mf3Rg==}

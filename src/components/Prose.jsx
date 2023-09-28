@@ -11,7 +11,7 @@ const Prose = ({ as: Component = 'div', className, ...props }) => {
 				// links
 				'prose-a:font-semibold prose-a:no-underline prose-a:text-sky-600 dark:prose-a:text-sky-400',
 				// pre
-				'prose-pre:rounded-xl prose-pre:bg-slate-950 prose-pre:shadow-lg dark:prose-pre:shadow-none dark:prose-pre:ring-1 dark:prose-pre:ring-slate-300/10'
+				'prose-pre:rounded-xl prose-pre:bg-slate-950 dark:prose-pre:ring-1 dark:prose-pre:ring-slate-300/10'
 			)}
 			{...props}
 		/>

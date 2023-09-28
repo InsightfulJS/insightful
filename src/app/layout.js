@@ -1,3 +1,7 @@
+import 'prismjs';
+import 'prismjs/components/prism-bash.min';
+import 'prismjs/themes/prism-tomorrow.css';
+
 import './globals.css';
 import { Red_Hat_Display } from 'next/font/google';
 import { ThemeProvider } from '@/themes/ThemeProvider';

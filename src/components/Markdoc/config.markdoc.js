@@ -1,6 +1,15 @@
+import { nodes } from '@markdoc/markdoc';
+
 import Callout from './Callout';
+import CodeBlock from './CodeBlock';
 
 const config = {
+	nodes: {
+		fence: {
+			render: CodeBlock,
+			attributes: nodes.fence.attributes,
+		},
+	},
 	tags: {
 		callout: {
 			render: 'Callout',
@@ -19,7 +28,8 @@ const config = {
 };
 
 const components = {
-	Callout: Callout,
+	Callout,
+	Fence: CodeBlock,
 };
 
 export { config, components };
