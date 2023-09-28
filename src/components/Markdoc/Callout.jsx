@@ -1,7 +1,6 @@
 import clsx from 'clsx';
 
 import { MdOutlineError } from 'react-icons/md';
-import { RiAlarmWarningLine } from 'react-icons/ri';
 import { PiWarningFill } from 'react-icons/pi';
 import { FaInfoCircle, FaLightbulb } from 'react-icons/fa';
 
