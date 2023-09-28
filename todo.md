@@ -12,7 +12,7 @@
 -   [x] generate sidebar based on file/folder numbering system
 -   [x] fix if you try to go to a slug that is a folder and not a file, like just /docs
 -   [x] add 404 not found page to incorrect slug
--   [ ] add error upon empty docs folder
+-   [x] add error upon empty docs folder
 -   [ ] fill out proper markdown content based on actual insightful documentation
 -   [ ] highlight which 'on this page' you are on
 -   [ ] change the docs folder to have multiple nesting and an accordian style sidebare like the nextjs docs
