@@ -10,29 +10,25 @@
 -   [x] template the rendering in a layout file
 -   [x] create breadcrumb component
 -   [x] generate sidebar based on file/folder numbering system
--   [ ] add syntax highlighting to code blocks
--   [ ] fix if you try to go to a slug that is a folder and not a file, like just /docs
+-   [x] fix if you try to go to a slug that is a folder and not a file, like just /docs
+-   [x] add 404 not found page to incorrect slug
+-   [ ] add error upon empty docs folder
+-   [ ] fill out proper markdown content based on actual insightful documentation
 -   [ ] highlight which 'on this page' you are on
 -   [ ] change the docs folder to have multiple nesting and an accordian style sidebare like the nextjs docs
--   [ ] use folder/file ordering like the nextjs documentation
 -   [ ] have a scroll to top button dynamically show when users scroll to the bottom
 -   [ ] complete search bar functionailty
--   [ ] add 404 not found page to incorrect slug
 -   [ ] add pagination at the bottom of the doc
 -   [ ] build a footer
 -   [ ] add share button functionality
--   [ ] add error upon empty docs folder
 -   [ ] make fully responsive
+-   [ ] create custom code block with copy button and syntax highlighting
 -   [ ] add a config file to change the following:
     -   [ ] github icon to gitlab/bitbucket
     -   [ ] disable scroll to top button
     -   [ ] footer content
     -   [ ] disbale share button
     -   [ ] custom logo
--   [ ] Add pre-built markdown components like:
-    -   [ ] codeblock
-    -   [ ] info/tip/warning
-    -   [ ] accordion
 -   [ ] use your docs to document your own docs (not a riddle)
 -   [ ] create a landing page advertising your docs
 -   [ ] add a 'was this page helpful' section at the bottom, maybe use node mail?
