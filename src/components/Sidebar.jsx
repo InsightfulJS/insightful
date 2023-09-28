@@ -20,9 +20,12 @@ const Sidebar = () => {
 			{/* Sidebar Content */}
 			<div className='absolute w-full h-full flex flex-col justify-start items-start pt-4 pb-8 px-4 gap-12'>
 				{/* Logo */}
-				<div className='flex flex-row gap-2 justify-center items-center'>
+				<a
+					href='/'
+					className='flex flex-row gap-2 justify-center items-center'
+				>
 					<DynamicLogo />
-				</div>
+				</a>
 
 				{/* Main Navigation */}
 				<nav className='px-4 '>
