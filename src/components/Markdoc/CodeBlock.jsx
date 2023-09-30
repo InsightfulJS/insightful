@@ -14,8 +14,8 @@ const CodeBlock = ({ children, 'data-language': language }) => {
 	}, [children]);
 
 	return (
-		<div className='code relative' aria-live='polite'>
-			<pre ref={ref} className={`language-${language}`}>
+		<div className='code relative w-auto' aria-live='polite'>
+			<pre ref={ref} className={`language-${language} w-full`}>
 				{children}
 			</pre>
 			<button

@@ -9,7 +9,7 @@ const DocumentLayout = ({ breadcrumb, title, documentContent, headings }) => {
 				<h1 className='text-3xl font-semibold text-sky-700 dark:text-sky-500'>
 					{title}
 				</h1>
-				<Prose className='flex-grow'>{documentContent}</Prose>
+				<Prose className='flex-grow w-full'>{documentContent}</Prose>
 			</div>
 			<div className='hidden xl:sticky xl:top-[0.5rem] xl:flex xl:flex-row xl:justify-start xl:items-start'>
 				<OnThisPage headings={headings} />

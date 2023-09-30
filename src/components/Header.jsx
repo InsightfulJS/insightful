@@ -25,7 +25,6 @@ const Header = () => {
 			<div className='flex flex-row gap-6 justify-end items-center'>
 				<ThemeToggle />
 				<BiLogoGithub className='text-slate-700 dark:text-slate-300 w-6 h-6' />
-				<BiSolidShareAlt className='text-slate-700 dark:text-slate-300 w-6 h-6' />
 			</div>
 		</div>
 	);

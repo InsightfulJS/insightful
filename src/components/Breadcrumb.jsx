@@ -11,16 +11,21 @@ const Breadcrumb = ({ slugArray = [] }) => {
 				<a href='/'>
 					<HiHome className='w-4 h-4' />
 				</a>
-				<span className=''>/</span>
+				<span className='font-semibold'>&gt;</span>
 				{slugArray.map((section, idx) => {
 					const sectionName = pathToTitleCase(
 						removeNumberedPrefix(section)
 					).replace('.md', '');
+
+					let sectionCls =
+						idx == slugArray.length - 1
+							? 'bg-slate-300 bg-opacity-40 rounded-full py-1 px-2 dark:bg-slate-800'
+							: '';
 					return (
 						<React.Fragment key={idx}>
-							<p>{sectionName}</p>
+							<p className={sectionCls}>{sectionName}</p>
 							{idx < slugArray.length - 1 && (
-								<span className=''>/</span>
+								<span className='font-semibold'>&gt;</span>
 							)}
 						</React.Fragment>
 					);

@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { FaSun, FaMoon } from 'react-icons/fa';
+import { RxMoon, RxSun } from 'react-icons/rx';
 import { useTheme } from 'next-themes';
 
 const ThemeToggle = () => {
@@ -20,9 +20,9 @@ const ThemeToggle = () => {
 			className='dark-mode-toggle'
 		>
 			{theme === 'dark' ? (
-				<FaSun className='w-5 h-5 text-slate-300' />
+				<RxSun className='w-5 h-5 text-slate-300' />
 			) : (
-				<FaMoon className='w-5 h-5 text-slate-700' />
+				<RxMoon className='w-5 h-5 text-slate-700' />
 			)}
 		</button>
 	);
