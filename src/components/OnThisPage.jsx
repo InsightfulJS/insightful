@@ -7,7 +7,7 @@ const OnThisPage = ({ headings = [] }) => {
 			<h2 className='text-sm font-semibold text-slate-900 dark:text-slate-100'>
 				On this page
 			</h2>
-			<div className='flex flex-col text-sm font-normal text-slate-700 dark:text-slate-300'>
+			<div className='flex flex-col text-sm font-base text-slate-700 dark:text-slate-300'>
 				{headings.map(({ title, id, children }) => {
 					return (
 						<ol key={id} className='mt-2 space-y-3'>

@@ -4,6 +4,8 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 
 const SidebarLinks = ({ content }) => {
+	console.log(JSON.stringify(content, null, 2));
+
 	const [activePage, setActivePage] = useState(
 		content[0]?.pages[0]?.path ?? '/'
 	);
@@ -22,7 +24,7 @@ const SidebarLinks = ({ content }) => {
 						className='space-y-9'
 					>
 						<li>
-							<h2 className='font-display text-sm font-medium text-slate-900 dark:text-slate-100'>
+							<h2 className='text-sm font-semibold text-slate-900 dark:text-slate-100'>
 								{sectionNameTitleCase}
 							</h2>
 							<ul
@@ -35,7 +37,7 @@ const SidebarLinks = ({ content }) => {
 											<Link
 												className={`text-sm block w-full pl-3.5 ${isActive(
 													path
-												)} before:pointer-events-none before:absolute before:-left-0.5 before:top-1/2 before:h-5 before:w-0.5 before:-translate-y-1/2 before:rounded-full font-medium text-slate-600 dark:text-slate-300 before:bg-sky-500`}
+												)} before:pointer-events-none before:absolute before:-left-0.5 before:top-1/2 before:h-5 before:w-0.5 before:-translate-y-1/2 before:rounded-full font-medium text-slate-500 dark:text-slate-400 before:bg-sky-500`}
 												href={path}
 												onClick={() =>
 													setActivePage(path)
