@@ -1,5 +1,5 @@
 ---
-title: Customisation
+title: Theme
 ---
 
 ## How to Customise

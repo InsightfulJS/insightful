@@ -1,5 +1,5 @@
 ---
-title: Architecture
+title: Project Structure
 ---
 
 ## Basics
