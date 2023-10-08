@@ -1,56 +1,60 @@
 'use client';
 
-import React, { useState } from 'react';
+import { usePathname } from 'next/navigation';
 import Link from 'next/link';
+import clsx from 'clsx';
 
 const SidebarLinks = ({ content }) => {
-	console.log(JSON.stringify(content, null, 2));
+	const pathname = usePathname();
+	console.log(pathname);
 
-	const [activePage, setActivePage] = useState(
-		content[0]?.pages[0]?.path ?? '/'
-	);
+	const SectionHeading = ({ heading }) => {
+		return (
+			<h2 className='text-sm font-medium text-slate-900 dark:text-slate-100'>
+				{heading}
+			</h2>
+		);
+	};
 
-	const isActive = (path) => {
-		return path != activePage && 'before:hidden';
+	const PageListItem = ({ path, name }) => {
+		return (
+			<li className='relative'>
+				<Link
+					className={clsx(
+						'text-sm block w-full pl-3 -ml-px',
+						pathname == path &&
+							'border-l border-sky-600 text-sky-700 dark:text-sky-500 dark:border-sky-500',
+						pathname != path &&
+							'text-slate-500 dark:text-slate-400 hover:border-slate-400 hover:border-l'
+					)}
+					href={path}
+				>
+					{name}
+				</Link>
+			</li>
+		);
 	};
 
 	return (
-		<div className='flex flex-col justify-between items-start gap-4'>
+		<div className='m-auto w-full flex flex-col justify-between items-start gap-8'>
 			{content.map(({ sectionNameTitleCase = '', pages = [] }) => {
 				return (
-					<ul
-						key={sectionNameTitleCase}
-						role='list'
-						className='space-y-9'
-					>
-						<li>
-							<h2 className='text-sm font-semibold text-slate-900 dark:text-slate-100'>
-								{sectionNameTitleCase}
-							</h2>
-							<ul
-								role='list'
-								className='mt-2 space-y-2 border-l-2 lg:mt-4 lg:space-y-4 border-slate-300 dark:border-slate-700'
-							>
-								{pages.map(({ name = '', path = '' }) => {
-									return (
-										<li key={path} className='relative'>
-											<Link
-												className={`text-sm block w-full pl-3.5 ${isActive(
-													path
-												)} before:pointer-events-none before:absolute before:-left-0.5 before:top-1/2 before:h-5 before:w-0.5 before:-translate-y-1/2 before:rounded-full font-medium text-slate-500 dark:text-slate-400 before:bg-sky-500`}
-												href={path}
-												onClick={() =>
-													setActivePage(path)
-												}
-											>
-												{name}
-											</Link>
-										</li>
-									);
-								})}
-							</ul>
-						</li>
-					</ul>
+					<div key={sectionNameTitleCase} className='w-full'>
+						{/* Primary Sections */}
+						<SectionHeading heading={sectionNameTitleCase} />
+						<ul
+							role='list'
+							className='mt-2 space-y-2 lg:mt-4 lg:space-y-4 border-l border-slate-200 dark:border-slate-700'
+						>
+							{pages.map(({ name = '', path = '' }) => (
+								<PageListItem
+									key={name}
+									name={name}
+									path={path}
+								/>
+							))}
+						</ul>
+					</div>
 				);
 			})}
 		</div>
