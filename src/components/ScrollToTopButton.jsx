@@ -1,7 +1,7 @@
 'use client';
 
-import { useEffect, useState } from 'react';
 import clsx from 'clsx';
+import { useEffect, useState } from 'react';
 import { BsArrowUpCircle } from 'react-icons/bs';
 
 const ScrollToTopButton = () => {
@@ -33,20 +33,21 @@ const ScrollToTopButton = () => {
 	};
 
 	return (
-		<div
-			className={clsx(
-				'w-full mt-8 pt-4 border-slate-200 dark:border-slate-700',
-				isVisible ? 'border-t' : 'border-none'
-			)}
-		>
+		<div className='mt-8 flex flex-col gap-4 w-full'>
+			<span
+				className={clsx(
+					'w-[70%] h-px bg-slate-200 dark:bg-slate-700 transition-opacity duration-200',
+					isVisible ? 'opacity-100' : 'opacity-0'
+				)}
+			></span>
 			<button
 				className={clsx(
-					' flex flex-row gap-2 items-center text-sm text-slate-400 dark:text-slate-600 outline-none transition-opacity duration-200',
+					'flex flex-row gap-2 items-center text-sm text-slate-500 dark:text-slate-400 outline-none transition-opacity duration-200',
 					isVisible ? 'opacity-100' : 'opacity-0'
 				)}
 				onClick={scrollToTop}
 			>
-				<BsArrowUpCircle className='w-4 h-4 text-slate-400 dark:text-slate-600' />
+				<BsArrowUpCircle className='w-4 h-4 text-slate-500 dark:text-slate-400' />
 				Scroll To Top
 			</button>
 		</div>
