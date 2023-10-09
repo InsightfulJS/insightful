@@ -6,7 +6,6 @@ import clsx from 'clsx';
 
 const SidebarLinks = ({ content }) => {
 	const pathname = usePathname();
-	console.log(pathname);
 
 	const SectionHeading = ({ heading }) => {
 		return (
