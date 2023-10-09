@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import ScrollToTopButton from './ScrollToTopButton';
 
 const OnThisPage = ({ headings = [] }) => {
 	return (
@@ -31,6 +32,8 @@ const OnThisPage = ({ headings = [] }) => {
 					);
 				})}
 			</div>
+
+			<ScrollToTopButton />
 		</nav>
 	);
 };
