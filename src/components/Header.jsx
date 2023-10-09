@@ -6,14 +6,14 @@ import ThemeToggle from './ThemeToggle';
 
 const Header = () => {
 	return (
-		<div className='w-full h-14 flex flex-row px-4 py-2 gap-4 justify-between items-center bg-slate-50 dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800'>
+		<div className='w-full h-14 flex flex-row px-4 py-2 gap-4 justify-between items-center bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800'>
 			{/* Logo */}
 			<DynamicLogo />
 
 			{/* Search Bar Button */}
 			<button
 				type='button'
-				className='w-[30%] flex h-8 items-center gap-2 rounded-md bg-slate-100 dark:bg-slate-900 pl-2 pr-3 text-sm text-zinc-700 dark:text-zinc-500 ring-1 ring-slate-200 dark:ring-slate-700 first-letter:dark:ring-zinc-900/10 transition hover:ring-zinc-900/20 ui-not-focus-visible:outline-none '
+				className='w-[30%] flex h-8 items-center gap-2 rounded-md bg-slate-100 dark:bg-slate-900 pl-2 pr-3 text-sm text-zinc-700 dark:text-zinc-500 ring-1 ring-slate-200 dark:ring-slate-700 first-letter:dark:ring-zinc-900/10 transition hover:ring-zinc-900/20 dark:hover:ring-zinc-500/20 ui-not-focus-visible:outline-none '
 			>
 				<BiSearchAlt className='text-slate-400 dark:text-slate-500 w-4 h-4' />
 				<p className='text-slate-400 dark:text-slate-500 text-sm font-normal'>
