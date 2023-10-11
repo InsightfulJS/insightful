@@ -5,12 +5,12 @@ import matter from 'gray-matter';
 
 export const getDocContent = ({ slugArray = [], home = false }) => {
 	if (home) {
-		const file = `docs/home.md`;
+		const file = `src/docs/home.md`;
 		const content = fs.readFileSync(file, 'utf8');
 		return matter(content);
 	}
 
-	const file = `docs/${slugArray.join('/')}`;
+	const file = `src/docs/${slugArray.join('/')}`;
 
 	const doesNotExist = !fs.existsSync(file);
 	const isDirectory = fs.existsSync(file) && fs.lstatSync(file).isDirectory();

@@ -6,7 +6,7 @@ import SidebarExternalLink from './SidebarExternalLink';
 import { generateSidebarContent } from '@/utils/generateSidebarContent';
 
 const Sidebar = () => {
-	const docsDir = path.join(process.cwd(), 'docs');
+	const docsDir = path.join(process.cwd(), 'src/docs');
 	const content = generateSidebarContent(docsDir);
 	const hasExtLinks = Object(config).hasOwnProperty('sidebarExternalLinks');
 

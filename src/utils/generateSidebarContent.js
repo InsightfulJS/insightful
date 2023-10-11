@@ -23,7 +23,7 @@ export const generateSidebarContent = (docsDir) => {
 					const slug = `/docs/${sectionName}/${page}`;
 					const pageName = page.replace(/\.md$/, '');
 					const fileContents = fs.readFileSync(
-						path.join(process.cwd(), slug),
+						path.join(process.cwd(), 'src/', slug),
 						'utf8'
 					);
 					const { data } = { ...matter(fileContents) };
