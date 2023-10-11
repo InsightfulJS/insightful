@@ -17,6 +17,7 @@ specifiers:
   eslint-config-next: 13.5.2
   fs-extra: ^11.1.1
   gray-matter: ^4.0.3
+  lucide-react: ^0.284.0
   markdown-to-jsx: ^7.3.2
   next: 13.5.2
   next-themes: ^0.2.1
@@ -46,6 +47,7 @@ dependencies:
   eslint-config-next: 13.5.2_eslint@8.49.0
   fs-extra: 11.1.1
   gray-matter: 4.0.3
+  lucide-react: 0.284.0_react@18.2.0
   markdown-to-jsx: 7.3.2_react@18.2.0
   next: 13.5.2_biqbaboplfbrettd7655fr4n2y
   next-themes: 0.2.1_a5awh3fq7n5gjpbh6s2j4fmxfi
@@ -2619,6 +2621,14 @@ packages:
     engines: {node: '>=10'}
     dependencies:
       yallist: 4.0.0
+    dev: false
+
+  /lucide-react/0.284.0_react@18.2.0:
+    resolution: {integrity: sha512-dVSMHYAya/TeY3+vsk+VQJEKNQN2AhIo0+Dp09B2qpzvcBuu93H98YZykFcjIAfmanFiDd8nqfXFR38L757cyQ==}
+    peerDependencies:
+      react: ^16.5.1 || ^17.0.0 || ^18.0.0
+    dependencies:
+      react: 18.2.0
     dev: false
 
   /make-error/1.3.6:

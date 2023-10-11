@@ -5,10 +5,10 @@ import { PiWarningFill } from 'react-icons/pi';
 import { FaInfoCircle, FaLightbulb } from 'react-icons/fa';
 
 const styles = {
-	tip: 'bg-green-300',
-	warning: 'bg-orange-300',
-	info: 'bg-sky-300',
-	error: 'bg-red-300',
+	tip: 'bg-green-300 dark:bg-green-800',
+	warning: 'bg-orange-300 dark:bg-orange-800',
+	info: 'bg-sky-300 dark:bg-sky-800',
+	error: 'bg-red-300 dark:bg-red-800',
 };
 
 const textStyles = {
