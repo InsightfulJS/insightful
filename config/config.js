@@ -1,26 +1,21 @@
 const config = {
-	repoIcon: 'gitlab',
-	repoLink: '',
+	repoIcon: 'github',
+	repoLink: 'https://github.com/InsightfulJS/insightful',
 	footerText: 'Copyright © 2023 Insightful Ltd',
 	sidebarExternalLinks: [
 		{
 			label: 'Landing Page',
-			url: 'https://google.com',
+			url: 'https://insightfuljs.com',
 			icon: 'layers-2',
 		},
 		{
-			label: 'Community Discord',
-			url: 'https://google.com',
+			label: 'Community Discussion',
+			url: 'https://github.com/InsightfulJS/insightful/discussions',
 			icon: 'message-square',
 		},
 		{
-			label: 'Showcase',
-			url: 'https://google.com',
-			icon: 'presentation',
-		},
-		{
 			label: 'Report an Issue',
-			url: 'https://google.com',
+			url: 'https://github.com/InsightfulJS/insightful/issues',
 			icon: 'flag',
 		},
 	],

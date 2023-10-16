@@ -11,7 +11,7 @@ const Sidebar = () => {
 	const hasExtLinks = Object(config).hasOwnProperty('sidebarExternalLinks');
 
 	return (
-		<div className='relative w-[24%] h-full flex flex-col'>
+		<div className='hidden relative min-w-[240px] w-[24%] h-full flex-col md:flex'>
 			{/* Sidebar Border */}
 			<div className='absolute inset-x-0 bottom-0 right-0 h-px bg-slate-200 dark:bg-slate-800 lg:left-auto lg:top-12 lg:bottom-12 lg:h-auto lg:w-px'></div>
 

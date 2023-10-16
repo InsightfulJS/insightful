@@ -3,9 +3,10 @@ import { BiSearchAlt, BiLogoGithub } from 'react-icons/bi';
 import { AiFillGitlab } from 'react-icons/ai';
 import { IoLogoBitbucket } from 'react-icons/io';
 
+import config from '@/config/config';
 import DynamicLogo from './DynamicLogo';
 import ThemeToggle from './ThemeToggle';
-import config from '@/config/config';
+import Search from './Search';
 
 const icons = {
 	bitbucket: IoLogoBitbucket,
@@ -36,6 +37,7 @@ const Header = () => {
 					<kbd className='font-sans'>K</kbd>
 				</kbd>
 			</button>
+			<Search />
 
 			{/* Control Buttons */}
 			<div className='flex flex-row gap-6 justify-end items-center flex-grow basis-0'>

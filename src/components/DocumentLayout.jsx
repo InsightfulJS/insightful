@@ -8,7 +8,7 @@ const DocumentLayout = ({ breadcrumb, title, documentContent, headings }) => {
 			id='content'
 			className='relative w-full h-full flex flex-row justify-between items-start pl-24 pr-16 py-6 gap-20 overflow-y-auto'
 		>
-			<div className='w-full min-h-full flex flex-col gap-4 justify-start items-start'>
+			<div className='mt-4 w-full min-h-full flex flex-col gap-4 justify-start items-start'>
 				{breadcrumb}
 				<h1 className='text-3xl font-semibold text-sky-700 dark:text-sky-500'>
 					{title}

@@ -1,42 +1,45 @@
 'use client';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { tomorrow } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
-import * as React from 'react';
 import copy from 'copy-to-clipboard';
-import Prism from 'prismjs';
 
 import { RxCopy } from 'react-icons/rx';
 
-const CodeBlock = ({ children, 'data-language': language }) => {
-	const ref = React.useRef(null);
-
-	React.useEffect(() => {
-		if (ref.current) Prism.highlightElement(ref.current, false);
-	}, [children]);
-
+const CodeBlock = ({
+	children,
+	'data-language': language,
+	isDisplay = false,
+}) => {
 	return (
-		<div className='group code relative w-auto' aria-live='polite'>
-			<pre ref={ref} className={`language-${language} w-full`}>
-				{children}
-			</pre>
-			<button
-				className='absolute top-2 right-2'
-				onClick={() => copy(children)}
+		<div className='h-full group relative w-auto' aria-live='polite'>
+			<SyntaxHighlighter
+				language={language}
+				style={tomorrow}
+				showLineNumbers={isDisplay}
+				showInlineLineNumbers={true}
+				customStyle={{
+					background: '#020617',
+					fontSize: '0.8rem',
+					boxShadow: 'none',
+					borderRadius: '0.5rem',
+				}}
 			>
-				<RxCopy className='w-5 h-5 text-slate-600 hover:text-slate-400' />
-			</button>
-			<p className='hidden group-hover:block absolute -bottom-1 right-3 text-xs font-base text-slate-400'>
-				{language}
-			</p>
-			<style jsx>
-				{`
-					/* Override Prism styles */
-					.code :global(pre[class*='language-']) {
-						text-shadow: none;
-						border-radius: 8px;
-						background-color: #020617;
-					}
-				`}
-			</style>
+				{children}
+			</SyntaxHighlighter>
+			{!isDisplay && (
+				<button
+					className='absolute top-2 right-2'
+					onClick={() => copy(children)}
+				>
+					<RxCopy className='w-5 h-5 text-slate-600 hover:text-slate-400' />
+				</button>
+			)}
+			{!isDisplay && (
+				<p className='hidden group-hover:block absolute -top-2 right-10 text-xs font-base text-slate-400'>
+					{language}
+				</p>
+			)}
 		</div>
 	);
 };

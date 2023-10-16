@@ -9,7 +9,6 @@ export default function Home() {
 
 	return (
 		<DocumentLayout
-			breadcrumb={<Breadcrumb />}
 			title={data?.title}
 			documentContent={documentContent}
 			headings={headings}

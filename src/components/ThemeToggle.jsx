@@ -17,7 +17,9 @@ const ThemeToggle = () => {
 	return (
 		<button
 			onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-			className='dark-mode-toggle'
+			className={`dark-mode-toggle animate-spin-in-75 duration-300 transform ${
+				theme === 'dark' ? 'rotate-180' : 'rotate-0'
+			}`}
 		>
 			{theme === 'dark' ? (
 				<RxSun className='w-5 h-5 text-slate-300' />

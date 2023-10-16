@@ -20,7 +20,6 @@ const OnThisPage = ({ headings = [] }) => {
 				const rect = heading.getBoundingClientRect();
 				if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
 					currentlyInView = heading;
-					console.log(heading);
 					break;
 				}
 			}
