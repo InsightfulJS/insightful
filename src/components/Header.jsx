@@ -1,5 +1,4 @@
-import React from 'react';
-import { BiSearchAlt, BiLogoGithub } from 'react-icons/bi';
+import { BiLogoGithub } from 'react-icons/bi';
 import { AiFillGitlab } from 'react-icons/ai';
 import { IoLogoBitbucket } from 'react-icons/io';
 
@@ -23,26 +22,15 @@ const Header = () => {
 			{/* Logo */}
 			<DynamicLogo />
 
-			{/* Search Bar Button */}
-			<button
-				type='button'
-				className='w-[30%] flex h-8 items-center gap-2 rounded-md bg-slate-100 dark:bg-slate-900 pl-2 pr-3 text-sm text-zinc-700 dark:text-zinc-500 ring-1 ring-slate-200 dark:ring-slate-700 first-letter:dark:ring-zinc-900/10 transition hover:ring-zinc-900/20 dark:hover:ring-zinc-500/20 ui-not-focus-visible:outline-none '
-			>
-				<BiSearchAlt className='text-slate-400 dark:text-slate-500 w-4 h-4' />
-				<p className='text-slate-400 dark:text-slate-500 text-sm font-normal'>
-					Find something...
-				</p>
-				<kbd className='ml-auto text-2xs text-slate-400 dark:text-slate-500'>
-					<kbd className='font-sans'>⌘</kbd>
-					<kbd className='font-sans'>K</kbd>
-				</kbd>
-			</button>
+			{/* Search Bar  */}
 			<Search />
 
 			{/* Control Buttons */}
 			<div className='flex flex-row gap-6 justify-end items-center flex-grow basis-0'>
 				<ThemeToggle />
-				<Icon className='text-slate-700 dark:text-slate-300 w-6 h-6' />
+				<a target='_blank' href={config?.repoLink ?? ''}>
+					<Icon className='text-slate-700 dark:text-slate-300 w-6 h-6' />
+				</a>
 			</div>
 		</div>
 	);

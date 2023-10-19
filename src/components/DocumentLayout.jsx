@@ -1,15 +1,24 @@
 import Prose from '@/components/Prose';
 import OnThisPage from '@/components/OnThisPage';
+import DocumentHero from '@/components/DocumentHero';
 import Footer from '@/components/Footer';
 
-const DocumentLayout = ({ breadcrumb, title, documentContent, headings }) => {
+const DocumentLayout = ({
+	frontmatter,
+	breadcrumb,
+	documentContent,
+	headings,
+}) => {
+	const { title, banner, tags } = { ...frontmatter };
+
 	return (
 		<div
 			id='content'
-			className='relative w-full h-full flex flex-row justify-between items-start pl-24 pr-16 py-6 gap-20 overflow-y-auto'
+			className='relative w-full h-full flex flex-row justify-between items-start pl-20 pr-16 py-6 gap-20 overflow-y-auto'
 		>
 			<div className='mt-4 w-full min-h-full flex flex-col gap-4 justify-start items-start'>
 				{breadcrumb}
+				{banner && <DocumentHero src={banner} />}
 				<h1 className='text-3xl font-semibold text-sky-700 dark:text-sky-500'>
 					{title}
 				</h1>

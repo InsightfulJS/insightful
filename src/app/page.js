@@ -1,5 +1,4 @@
 import DocumentLayout from '@/components/DocumentLayout';
-import Breadcrumb from '@/components/Breadcrumb';
 import { getDocContent } from '@/utils/getDocContent';
 import { markdownToReact } from '@/utils/markdownToReact';
 
@@ -9,7 +8,7 @@ export default function Home() {
 
 	return (
 		<DocumentLayout
-			title={data?.title}
+			frontmatter={data}
 			documentContent={documentContent}
 			headings={headings}
 		/>
