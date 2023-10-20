@@ -22,6 +22,7 @@ const DynamicLogo = () => {
 		>
 			<Image
 				src={`/logo-${theme ?? 'light'}.svg`}
+				loading='eager'
 				width={0}
 				height={0}
 				sizes='100vw'

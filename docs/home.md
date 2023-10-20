@@ -1,5 +1,5 @@
 ---
-title: Welcome
+title:
 banner: /banner.svg
 tags: []
 ---
