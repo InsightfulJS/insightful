@@ -13,7 +13,7 @@ const Page = ({ params }) => {
 	return (
 		<DocumentLayout
 			breadcrumb={<Breadcrumb slugArray={slugArray} />}
-			title={data?.title}
+			frontmatter={data}
 			documentContent={documentContent}
 			headings={headings}
 		/>

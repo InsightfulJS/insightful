@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import dynamic from 'next/dynamic';
 import dynamicIconImports from 'lucide-react/dynamicIconImports';
 
@@ -6,7 +5,8 @@ const Icon = ({ label, icon, href }) => {
 	const LucideIcon = dynamic(dynamicIconImports[icon]);
 
 	return (
-		<Link
+		<a
+			target='_blank'
 			className='flex flex-row gap-3 items-center justify-start w-full'
 			href={href}
 		>
@@ -20,7 +20,7 @@ const Icon = ({ label, icon, href }) => {
 			<p className='text-sm text-slate-700 dark:text-slate-100'>
 				{label}
 			</p>
-		</Link>
+		</a>
 	);
 };
 

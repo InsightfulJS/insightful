@@ -26,7 +26,7 @@ const DynamicLogo = () => {
 				height={0}
 				sizes='100vw'
 				style={{ width: 'auto', height: '100%' }} // optional
-				alt='logo'
+				alt='Website logo'
 			/>
 		</Link>
 	);

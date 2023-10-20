@@ -95,7 +95,7 @@ const config = {
 				src: {
 					type: String,
 				},
-				img: {
+				alt: {
 					type: String,
 				},
 				width: {

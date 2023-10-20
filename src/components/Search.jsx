@@ -2,12 +2,23 @@
 
 import 'superkey/styles.css';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { BiSearchAlt } from 'react-icons/bi';
 import { Command, CommandInput, CommandList, CommandOption } from 'superkey';
 
-const Search = () => {
-	const [open, setOpen] = useState(false);
+const SearchPallete = ({ open, setOpen }) => {
 	const [query, setQuery] = useState('');
+
+	useEffect(() => {
+		const down = (e) => {
+			if (e.key === 'k' && e.metaKey) {
+				setOpen((open) => !open);
+			}
+		};
+
+		document.addEventListener('keydown', down);
+		return () => document.removeEventListener('keydown', down);
+	}, []);
 
 	const myData = [
 		{
@@ -45,6 +56,30 @@ const Search = () => {
 				))}
 			</CommandList>
 		</Command>
+	);
+};
+
+const Search = () => {
+	const [open, setOpen] = useState(false);
+
+	return (
+		<>
+			<button
+				type='button'
+				className='w-[30%] flex h-8 items-center gap-2 rounded-md bg-slate-100 dark:bg-slate-900 pl-2 pr-3 text-sm text-zinc-700 dark:text-zinc-500 ring-1 ring-slate-200 dark:ring-slate-700 first-letter:dark:ring-zinc-900/10 transition hover:ring-zinc-900/20 dark:hover:ring-zinc-500/20 ui-not-focus-visible:outline-none '
+				onClick={() => setOpen(!open)}
+			>
+				<BiSearchAlt className='text-slate-400 dark:text-slate-500 w-4 h-4' />
+				<p className='text-slate-400 dark:text-slate-500 text-sm font-normal'>
+					Find something...
+				</p>
+				<kbd className='ml-auto text-2xs text-slate-400 dark:text-slate-500'>
+					<kbd className='font-sans'>⌘</kbd>
+					<kbd className='font-sans'>K</kbd>
+				</kbd>
+			</button>
+			<SearchPallete open={open} setOpen={setOpen} />
+		</>
 	);
 };
 

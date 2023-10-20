@@ -1,6 +1,7 @@
 ---
 title: Welcome
-description: hello
+banner: /banner.svg
+tags: []
 ---
 
 Insightful is a new static documentation template based on the features of [Next13](https://nextjs.org/blog/next-13) and Stripe's new markdown framework, [Markdoc](https://markdoc.dev).
