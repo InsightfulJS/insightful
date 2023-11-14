@@ -5,7 +5,6 @@ import Tabs from './Tabs';
 import Tab from './Tab';
 import ExpandImage from './ExpandImage';
 import { Callout, callout } from './Callout';
-import { CodePanel, codepanel } from './CodePanel';
 import { FancyLink, fancylink } from './FancyLink';
 import { Banner, banner } from './Banner';
 import { GlowBanner, glowbanner } from './GlowBanner';
@@ -82,7 +81,6 @@ const config = {
 		'expandable-image': expandableImage,
 		'markdoc-example': markdocExample,
 		callout,
-		codepanel,
 		fancylink,
 		tab,
 		tabs,
@@ -95,7 +93,6 @@ const components = {
 	Fence: Code,
 	FancyLink,
 	Callout,
-	CodePanel,
 	Tabs,
 	Tab,
 	ExpandImage,
