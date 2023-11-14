@@ -1,6 +1,3 @@
-'use client';
-
-import Link from 'next/link';
 import clsx from 'clsx';
 import { ChevronRight } from 'lucide-react';
 
@@ -35,9 +32,9 @@ const Banner = ({ title, text, href }) => {
 
 	if (href) {
 		return (
-			<Link href={href}>
+			<a href={href}>
 				<InnerContent />
-			</Link>
+			</a>
 		);
 	} else {
 		return <InnerContent />;

@@ -1,6 +1,3 @@
-'use client';
-
-import Link from 'next/link';
 import clsx from 'clsx';
 import { ChevronRight } from 'lucide-react';
 
@@ -10,7 +7,7 @@ const GlowBanner = ({ title, text, href }) => {
 			<div className='rounded-full my-4 flex justify-center items-center p-0.5 bg-gradient-to-r from-sky-300 via-cyan-300 to-sky-500 overflow-clip '>
 				<div
 					className={clsx(
-						'rounded-full bg-sky-200 w-full h-full dark:bg-sky-800 px-4 p-1.5 flex flex-row justify-between items-center',
+						'rounded-full bg-sky-100/80 w-full h-full dark:bg-sky-800 px-4 p-1.5 flex flex-row justify-between items-center',
 						href && 'hover:bg-sky-200/50 hover:dark:bg-sky-800/40'
 					)}
 				>
@@ -37,9 +34,9 @@ const GlowBanner = ({ title, text, href }) => {
 
 	if (href) {
 		return (
-			<Link href={href}>
+			<a href={href}>
 				<InnerContent />
-			</Link>
+			</a>
 		);
 	} else {
 		return <InnerContent />;
