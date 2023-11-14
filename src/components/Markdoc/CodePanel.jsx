@@ -18,4 +18,14 @@ const CodePanel = ({ children }) => {
 	);
 };
 
-export default CodePanel;
+const codepanel = {
+	render: CodePanel,
+	attributes: {
+		language: {
+			type: String,
+			default: 'default title',
+		},
+	},
+};
+
+export { CodePanel, codepanel };

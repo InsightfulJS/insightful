@@ -46,4 +46,19 @@ const GlowBanner = ({ title, text, href }) => {
 	}
 };
 
-export default GlowBanner;
+const glowbanner = {
+	render: 'GlowBanner',
+	attributes: {
+		title: {
+			type: String,
+		},
+		text: {
+			type: String,
+		},
+		href: {
+			type: String,
+		},
+	},
+};
+
+export { GlowBanner, glowbanner };

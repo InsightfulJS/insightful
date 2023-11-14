@@ -29,4 +29,22 @@ const FancyLink = ({ title = '', link, icon }) => {
 	);
 };
 
-export default FancyLink;
+const fancylink = {
+	render: FancyLink,
+	attributes: {
+		title: {
+			type: String,
+			default: 'default title',
+		},
+		link: {
+			type: String,
+			default: 'link href',
+		},
+		icon: {
+			type: String,
+			default: 'link',
+		},
+	},
+};
+
+export { FancyLink, fancylink };

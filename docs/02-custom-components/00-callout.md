@@ -6,6 +6,16 @@ title: Callout
 
 By default, **insightful** comes with its own set of components that you can easily use within your documentation, here is a list:
 
+{% markdoc-example %}
+
+```markdown
+{% callout type="info" title="Info" %}
+Markdoc is open-source—check out its [source](http://github.com/markdoc/markdoc) to see how it works.
+{% /callout %}
+```
+
+{% /markdoc-example %}
+
 ## Examples
 
 {% callout type="info" title="Info" %}

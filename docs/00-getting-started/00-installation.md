@@ -15,3 +15,5 @@ Or with `npx`:
 ```bash
 npx create-insightful-docs
 ```
+
+This will generate you an empty templated documentation site with everything you need to get started with InsightfulJS.

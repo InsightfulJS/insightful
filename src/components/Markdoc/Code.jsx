@@ -1,4 +1,5 @@
 'use client';
+
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { tomorrow } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
@@ -6,11 +7,7 @@ import copy from 'copy-to-clipboard';
 
 import { RxCopy } from 'react-icons/rx';
 
-const CodeBlock = ({
-	children,
-	'data-language': language,
-	isDisplay = false,
-}) => {
+const Code = ({ children, 'data-language': language, isDisplay = false }) => {
 	return (
 		<div className='h-full group relative w-auto' aria-live='polite'>
 			<SyntaxHighlighter
@@ -23,9 +20,10 @@ const CodeBlock = ({
 					fontSize: '0.8rem',
 					boxShadow: 'none',
 					borderRadius: '0.5rem',
+					padding: '16px',
 				}}
 			>
-				{children}
+				{String(children ?? '').replace(/\n+$/, '')}
 			</SyntaxHighlighter>
 			{!isDisplay && (
 				<button
@@ -44,4 +42,4 @@ const CodeBlock = ({
 	);
 };
 
-export default CodeBlock;
+export default Code;

@@ -2,16 +2,40 @@
 title: Project Structure
 ---
 
-## Basics
+## Project Architecture
 
-Here is a diagram of the project layout
+## docs/
 
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+In your project's documentation, the "docs" directory is the heart of your content. This directory is where you organize and structure all the documentation pages, sections, and subsections for your website. It's important to understand how the directory structure and prefix numbering work to effectively manage your documentation.
 
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+### Directory Hierarchy
 
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+The "docs" directory is organized hierarchically, consisting of sections and subsections. Each section is represented by a folder, and within each section folder, you can have multiple pages and nested subsections.
 
-## Heading 2
+### Prefix Numbering
 
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+A key feature of our documentation structure is prefix numbering. Each section folder and page within it is prefixed with a number followed by an underscore. This numbering system helps control the order and hierarchy of sections and pages on your website. It ensures that your documentation appears in the desired sequence.
+
+### Example
+
+Let's look at an example to understand this structure better. Suppose you have the following "docs" directory:
+
+```bash
+docs/
+    01_getting_started/
+        01_introduction.md
+        02_installation.md
+    02_configuration/
+        01_general_settings.md
+        02_advanced_options.md
+    03_usage/
+        01_basic_usage.md
+        02_advanced_features.md
+
+```
+
+### config/
+
+### src/app
+
+### src/components

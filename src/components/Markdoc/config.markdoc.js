@@ -1,19 +1,74 @@
 import { nodes, Tag } from '@markdoc/markdoc';
 
-import Callout from './Callout';
-import CodeBlock from './CodeBlock';
-import CodePanel from './CodePanel';
-import FancyLink from './FancyLink';
+import Code from './Code';
 import Tabs from './Tabs';
 import Tab from './Tab';
 import ExpandImage from './ExpandImage';
-import Banner from './Banner';
-import GlowBanner from './GlowBanner';
+import { Callout, callout } from './Callout';
+import { CodePanel, codepanel } from './CodePanel';
+import { FancyLink, fancylink } from './FancyLink';
+import { Banner, banner } from './Banner';
+import { GlowBanner, glowbanner } from './GlowBanner';
+
+const tabs = {
+	render: 'Tabs',
+	attributes: {},
+	transform(node, config) {
+		const labels = node
+			.transformChildren(config)
+			.filter((child) => child && child.name === 'Tab')
+			.map((tab) =>
+				typeof tab === 'object' ? tab.attributes.label : null
+			);
+
+		return new Tag(this.render, { labels }, node.transformChildren(config));
+	},
+};
+
+const tab = {
+	render: 'Tab',
+	attributes: {
+		label: {
+			type: String,
+		},
+	},
+};
+
+const expandableImage = {
+	render: 'ExpandImage',
+	attributes: {
+		src: {
+			type: String,
+		},
+		alt: {
+			type: String,
+		},
+		width: {
+			type: String,
+			default: '100%',
+		},
+	},
+};
+
+const markdocExample = {
+	render: Code,
+	attributes: {},
+	transform(node, config) {
+		const attributes = node.transformAttributes(config);
+		const { content, language } = node.children[0].attributes;
+
+		return new Tag(
+			this.render,
+			{ ...attributes, 'data-language': language },
+			[content]
+		);
+	},
+};
 
 const config = {
 	nodes: {
 		fence: {
-			render: CodeBlock,
+			render: Code,
 			attributes: {
 				...nodes.fence.attributes,
 				showLineNumbers: {
@@ -24,118 +79,21 @@ const config = {
 		},
 	},
 	tags: {
-		callout: {
-			render: 'Callout',
-			attributes: {
-				type: {
-					type: String,
-					default: 'default type',
-				},
-				title: {
-					type: String,
-					default: 'default title',
-				},
-			},
-		},
-		codepanel: {
-			render: CodePanel,
-			attributes: {
-				language: {
-					type: String,
-					default: 'default title',
-				},
-			},
-		},
-		fancylink: {
-			render: FancyLink,
-			attributes: {
-				title: {
-					type: String,
-					default: 'default title',
-				},
-				link: {
-					type: String,
-					default: 'link href',
-				},
-				icon: {
-					type: String,
-					default: 'link',
-				},
-			},
-		},
-		tabs: {
-			render: 'Tabs',
-			attributes: {},
-			transform(node, config) {
-				const labels = node
-					.transformChildren(config)
-					.filter((child) => child && child.name === 'Tab')
-					.map((tab) =>
-						typeof tab === 'object' ? tab.attributes.label : null
-					);
-
-				return new Tag(
-					this.render,
-					{ labels },
-					node.transformChildren(config)
-				);
-			},
-		},
-		tab: {
-			render: 'Tab',
-			attributes: {
-				label: {
-					type: String,
-				},
-			},
-		},
-		'expandable-image': {
-			render: 'ExpandImage',
-			attributes: {
-				src: {
-					type: String,
-				},
-				alt: {
-					type: String,
-				},
-				width: {
-					type: String,
-					default: '100%',
-				},
-			},
-		},
-		banner: {
-			render: 'Banner',
-			attributes: {
-				title: {
-					type: String,
-				},
-				text: {
-					type: String,
-				},
-				href: {
-					type: String,
-				},
-			},
-		},
-		glowbanner: {
-			render: 'GlowBanner',
-			attributes: {
-				title: {
-					type: String,
-				},
-				text: {
-					type: String,
-				},
-				href: {
-					type: String,
-				},
-			},
-		},
+		'expandable-image': expandableImage,
+		'markdoc-example': markdocExample,
+		callout,
+		codepanel,
+		fancylink,
+		tab,
+		tabs,
+		banner,
+		glowbanner,
 	},
 };
 
 const components = {
+	Fence: Code,
+	FancyLink,
 	Callout,
 	CodePanel,
 	Tabs,
@@ -143,7 +101,6 @@ const components = {
 	ExpandImage,
 	Banner,
 	GlowBanner,
-	Fence: CodeBlock,
 };
 
 export { config, components };

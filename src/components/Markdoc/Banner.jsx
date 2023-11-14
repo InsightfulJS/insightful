@@ -44,4 +44,19 @@ const Banner = ({ title, text, href }) => {
 	}
 };
 
-export default Banner;
+const banner = {
+	render: 'Banner',
+	attributes: {
+		title: {
+			type: String,
+		},
+		text: {
+			type: String,
+		},
+		href: {
+			type: String,
+		},
+	},
+};
+
+export { Banner, banner };

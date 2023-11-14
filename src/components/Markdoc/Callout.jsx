@@ -57,4 +57,18 @@ const Callout = ({ type = 'info', title, children }) => {
 	);
 };
 
-export default Callout;
+const callout = {
+	render: 'Callout',
+	attributes: {
+		type: {
+			type: String,
+			default: 'default type',
+		},
+		title: {
+			type: String,
+			default: 'default title',
+		},
+	},
+};
+
+export { Callout, callout };
