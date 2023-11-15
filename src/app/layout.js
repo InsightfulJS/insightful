@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
 				<ThemeProvider attribute='class' defaultTheme='light'>
 					<main className='flex h-screen flex-col items-start justify-start bg-gradient-to-br from-white to-slate-100 dark:bg-gradient-to-br dark:from-slate-900 dark:to-slate-800'>
 						<Header />
-						<div className='m-auto max-w-[2200px] h-[calc(100vh-3.5rem)] flex flex-row justify-start items-start gap-6'>
+						<div className='m-auto max-w-[2200px] h-[calc(100vh-3.5rem)] flex flex-row justify-start items-start gap-8'>
 							<Sidebar />
 							{children}
 						</div>
