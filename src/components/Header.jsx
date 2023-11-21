@@ -1,9 +1,10 @@
+import Image from 'next/image';
+
 import { BiLogoGithub } from 'react-icons/bi';
 import { AiFillGitlab } from 'react-icons/ai';
 import { IoLogoBitbucket } from 'react-icons/io';
 
 import config from '@/config/config';
-import DynamicLogo from './DynamicLogo';
 import ThemeToggle from './ThemeToggle';
 import Search from './Search';
 
@@ -14,13 +15,35 @@ const icons = {
 };
 
 const Header = () => {
-	const { repoIcon = 'github' } = { ...config };
+	const {
+		repoIcon = 'github',
+		logoIcon,
+		title,
+		logoHeightOverride,
+	} = { ...config };
 	const Icon = repoIcon in icons ? icons[repoIcon] : icons['github'];
 
 	return (
 		<div className='w-full h-14 flex flex-row px-4 py-2 gap-4 justify-between items-center bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800'>
 			{/* Logo */}
-			<DynamicLogo />
+			{/* <DynamicLogo /> */}
+			<div className='flex justify-start items-center gap-3 flex-grow basis-0 pl-4'>
+				<Image
+					src={`/${logoIcon}`}
+					loading='eager'
+					width={0}
+					height={0}
+					sizes='100vw'
+					style={{
+						width: 'auto',
+						height: logoHeightOverride ?? '25px',
+					}}
+					alt='Website logo icon'
+				/>
+				<p className='text-slate-600 tracking-wider font-semibold text-xl dark:text-slate-100 '>
+					{title}
+				</p>
+			</div>
 
 			{/* Search Bar  */}
 			<Search />

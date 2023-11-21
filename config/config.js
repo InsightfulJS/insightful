@@ -1,4 +1,7 @@
 const config = {
+	logoIcon: 'LogoIcon.svg',
+	// logoHeightOverride: '30px',
+	title: 'insightful',
 	repoIcon: 'github',
 	repoLink: 'https://github.com/InsightfulJS/insightful',
 	footerText: 'Copyright © 2023 Insightful Ltd',
