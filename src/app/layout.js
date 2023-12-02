@@ -27,7 +27,9 @@ export default function RootLayout({ children }) {
 					<main className='flex h-screen flex-col items-start justify-start bg-gradient-to-br from-white to-slate-100 dark:bg-gradient-to-br dark:from-slate-900 dark:to-slate-800'>
 						<Header />
 						<div className='m-auto max-w-[2200px] h-[calc(100vh-3.5rem)] flex flex-row justify-start items-start gap-8'>
-							<Sidebar />
+							<div className='hidden relative min-w-[240px] w-[24%] h-full flex-col sm:block'>
+								<Sidebar />
+							</div>
 							{children}
 						</div>
 					</main>

@@ -63,10 +63,10 @@ const Search = () => {
 	const [open, setOpen] = useState(false);
 
 	return (
-		<>
+		<div className='w-full h-full flex sm:items-center'>
 			<button
 				type='button'
-				className='w-[30%] flex h-8 items-center gap-2 rounded-md bg-slate-100 dark:bg-slate-900 pl-2 pr-3 text-sm text-zinc-700 dark:text-zinc-500 ring-1 ring-slate-200 dark:ring-slate-700 first-letter:dark:ring-zinc-900/10 transition hover:ring-zinc-900/20 dark:hover:ring-zinc-500/20 ui-not-focus-visible:outline-none '
+				className='w-full flex h-8 items-center gap-2 rounded-md bg-slate-100 dark:bg-slate-900 pl-2 pr-3 text-sm text-zinc-700 dark:text-zinc-500 ring-1 ring-slate-200 dark:ring-slate-700 first-letter:dark:ring-zinc-900/10 transition hover:ring-zinc-900/20 dark:hover:ring-zinc-500/20 ui-not-focus-visible:outline-none '
 				onClick={() => setOpen(!open)}
 			>
 				<BiSearchAlt className='text-slate-400 dark:text-slate-500 w-4 h-4' />
@@ -79,7 +79,7 @@ const Search = () => {
 				</kbd>
 			</button>
 			<SearchPallete open={open} setOpen={setOpen} />
-		</>
+		</div>
 	);
 };
 

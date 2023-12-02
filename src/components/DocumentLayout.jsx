@@ -14,11 +14,15 @@ const DocumentLayout = ({
 	return (
 		<div
 			id='content'
-			className='relative w-full h-full flex flex-row justify-between items-start pl-20 pr-16 py-6 gap-20 overflow-y-auto'
+			className='relative w-full h-full flex flex-row justify-between items-start px-8 py-6 gap-20 overflow-y-auto sm:pl-20 sm:pr-16'
 		>
 			<div className='mt-4 w-full min-h-full flex flex-col gap-4 justify-start items-start'>
 				{breadcrumb}
-				{banner && <DocumentHero src={banner} />}
+				{banner && (
+					<div className='w-full h-full hidden sm:flex'>
+						<DocumentHero src={banner} />
+					</div>
+				)}
 				<h1 className='text-3xl font-semibold text-sky-700 dark:text-sky-500'>
 					{title}
 				</h1>
