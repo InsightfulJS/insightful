@@ -31,6 +31,7 @@ const Code = ({ children, 'data-language': language, isDisplay = false }) => {
 					style={tomorrow}
 					showLineNumbers={isDisplay}
 					showInlineLineNumbers={true}
+					wrapLongLines={true}
 					customStyle={{
 						background: '#0f172a',
 						fontSize: '0.8rem',
@@ -50,6 +51,7 @@ const Code = ({ children, 'data-language': language, isDisplay = false }) => {
 					style={solarizedlight}
 					showLineNumbers={isDisplay}
 					showInlineLineNumbers={true}
+					wrapLongLines={true}
 					customStyle={{
 						background: '#f1f5f9',
 						fontSize: '0.8rem',
