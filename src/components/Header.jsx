@@ -22,7 +22,7 @@ const icons = {
 	github: BiLogoGithub,
 };
 
-const Header = () => {
+const Header = ({ content }) => {
 	const {
 		repoIcon = 'github',
 		logoIcon,
@@ -38,6 +38,7 @@ const Header = () => {
 				<HiOutlineMenuAlt1 className='w-7 h-7 text-slate-700 dark:text-slate-300' />
 			</button>
 			<MobileNavigation
+				content={content}
 				isOpen={isOpen}
 				setIsOpen={setIsOpen}
 				RepoIcon={Icon}

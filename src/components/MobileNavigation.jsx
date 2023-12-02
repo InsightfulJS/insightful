@@ -1,13 +1,21 @@
 'use client';
-
-import Link from 'next/link';
 import { Dialog } from '@headlessui/react';
+import { useEffect, useState } from 'react';
+import { usePathname } from 'next/navigation';
 import { IoCloseOutline } from 'react-icons/io5';
 
 import ThemeToggle from './ThemeToggle';
 import config from '@/config/config';
 
-const MobileNavigation = ({ isOpen, setIsOpen, RepoIcon }) => {
+import Navigation from './Navigation';
+
+const MobileNavigation = ({ content, isOpen, setIsOpen, RepoIcon }) => {
+	const pathname = usePathname();
+
+	useEffect(() => {
+		setIsOpen(false);
+	}, [pathname]);
+
 	return (
 		<Dialog
 			open={isOpen}
@@ -31,6 +39,8 @@ const MobileNavigation = ({ isOpen, setIsOpen, RepoIcon }) => {
 						</a>
 					</div>
 				</div>
+
+				<Navigation content={content} />
 			</Dialog.Panel>
 		</Dialog>
 	);

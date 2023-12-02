@@ -1,15 +1,6 @@
-import path from 'path';
-import config from '@/config/config';
-import { generateSidebarContent } from '@/utils/generateSidebarContent';
+import Navigation from './Navigation';
 
-import SidebarLinks from './SidebarLinks';
-import SidebarExternalLink from './SidebarExternalLink';
-
-const Sidebar = () => {
-	const docsDir = path.join(process.cwd(), 'docs');
-	const content = generateSidebarContent(docsDir);
-	const hasExtLinks = Object(config).hasOwnProperty('sidebarExternalLinks');
-
+const Sidebar = ({ content }) => {
 	return (
 		<>
 			{/* Sidebar Border */}
@@ -18,27 +9,7 @@ const Sidebar = () => {
 			{/* Sidebar Content */}
 			<div className='absolute w-full h-full flex flex-col justify-start items-center pt-4 pb-8 gap-12 overflow-y-auto'>
 				{/* Main Navigation */}
-				<nav className='mt-6 px-2'>
-					{/* Configured External Links */}
-					<div className='mb-8 flex flex-col gap-4 justify-start items-center w-full'>
-						{hasExtLinks &&
-							config.sidebarExternalLinks.map(
-								({ url, label, icon }) => {
-									return (
-										<SidebarExternalLink
-											key={label}
-											href={url}
-											label={label}
-											icon={icon}
-										/>
-									);
-								}
-							)}
-					</div>
-
-					{/* Sidebar Page Naviagtion */}
-					<SidebarLinks content={content} />
-				</nav>
+				<Navigation content={content} />
 			</div>
 		</>
 	);
